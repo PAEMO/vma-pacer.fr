@@ -1,4 +1,4 @@
-# vma-pacer
+# VMA Pacer
 
 ## Project setup
 ```
@@ -13,6 +13,11 @@ yarn serve
 ### Compiles and minifies for production
 ```
 yarn build
+```
+
+### Deploy to S3 bucket
+```
+yarn deploy
 ```
 
 ### Run your unit tests

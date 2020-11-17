@@ -1,27 +1,92 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <VMA @vma="onVmaChanged" />
+  <RacePredictor v-if="vma" :vma="vma" />
+  <TrainingRanges v-if="vma" :vma="vma"></TrainingRanges>
+  <VmaTrainings v-if="vma" :vma="vma" />
 </template>
 
 <script lang="ts">
-import { Options, Vue } from "vue-class-component";
-import HelloWorld from "./components/HelloWorld.vue";
+import VMA from "@/components/VMA.vue";
+import { defineComponent } from "vue";
+import TrainingRanges from "@/components/Trainings/TrainingRanges.vue";
+import RacePredictor from "@/components/RacePredictor.vue";
+import VmaTrainings from "@/components/Trainings/VmaTrainings/VmaTrainings.vue";
 
-@Options({
+export default defineComponent({
+  name: "App",
   components: {
-    HelloWorld
+    VMA,
+    RacePredictor,
+    TrainingRanges,
+    VmaTrainings
+  },
+  data() {
+    const vma: number = null;
+    return {
+      vma
+    };
+  },
+  methods: {
+    onVmaChanged(event: number) {
+      this.vma = event;
+    }
   }
-})
-export default class App extends Vue {}
+});
 </script>
 
 <style lang="scss">
+html {
+  background-color: #2c3e50;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: honeydew;
   margin-top: 60px;
+
+  table {
+    color: #2c3e50;
+
+    th {
+      background-color: #1b2d40;
+      color: honeydew;
+    }
+  }
+
+  td,
+  th {
+    padding: 10px;
+  }
+
+  .er {
+    background-color: darkgrey;
+  }
+
+  .ef {
+    background-color: #a7f583;
+  }
+
+  .ea {
+    background-color: #84c7f5;
+  }
+
+  .as42 {
+    background-color: #f5e082;
+  }
+
+  .as21,
+  .vma95,
+  .vma90 {
+    background-color: #f5b174;
+  }
+
+  .as10,
+  .vma105,
+  .vma100 {
+    background-color: #f56666;
+  }
 }
 </style>
