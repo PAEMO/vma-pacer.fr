@@ -1,7 +1,7 @@
 <template>
   <tr :class="training.id">
     <td>{{ training.percentage }}</td>
-    <td>{{ training.speed }}</td>
+    <td>{{ training.speed.toFixed(1) }}</td>
     <td>{{ training.pace }}</td>
     <td>
       <ul v-if="training.examples">

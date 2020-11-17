@@ -2,7 +2,7 @@
   <tr :class="range.id">
     <td rowspan="2">{{ range.name }}</td>
     <td>{{ range.lowRange }}</td>
-    <td>{{ applyPercentageSpeed(range.vma, range.lowRange).toFixed(2) }}</td>
+    <td>{{ applyPercentageSpeed(range.vma, range.lowRange).toFixed(1) }}</td>
     <td>{{ speedToPace(applyPercentageSpeed(range.vma, range.lowRange)) }}</td>
     <td v-if="range.length">
       {{
@@ -15,7 +15,7 @@
   </tr>
   <tr :class="range.id">
     <td>{{ range.highRange }}</td>
-    <td>{{ applyPercentageSpeed(range.vma, range.highRange).toFixed(2) }}</td>
+    <td>{{ applyPercentageSpeed(range.vma, range.highRange).toFixed(1) }}</td>
     <td>{{ speedToPace(applyPercentageSpeed(range.vma, range.highRange)) }}</td>
     <td v-if="range.length">
       {{
