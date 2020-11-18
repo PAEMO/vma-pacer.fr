@@ -4,9 +4,9 @@
     <thead>
       <tr>
         <th>%VMA</th>
-        <th>Speed (km/h)</th>
-        <th>Pace (min/km)</th>
-        <th>Training example</th>
+        <th>Vitesse (km/h)</th>
+        <th>Allure (min/km)</th>
+        <th>Exemple d'entraînement</th>
       </tr>
     </thead>
     <tbody>
