@@ -1,7 +1,7 @@
 import {
   decimalToPace,
-  lengthSpeedToTime,
-  speedToPace
+  lengthSpeedToTime, lengthTimeToSpeed,
+  speedToPace, stringTimeToSecondsTime
 } from "@/filter/conversion";
 
 describe("conversion", () => {
@@ -40,6 +40,36 @@ describe("conversion", () => {
     });
     it("all of them", () => {
       expect(lengthSpeedToTime(20, 15.5)).toBe("01:17:25");
+    });
+  });
+
+  describe("string time to seconds time", () => {
+    it("seconds only", () => {
+      expect(stringTimeToSecondsTime("00:00:27")).toBe(27);
+    });
+    it("minutes only", () => {
+      expect(stringTimeToSecondsTime("00:11:00")).toBe(660);
+    });
+    it("hours only", () => {
+      expect(stringTimeToSecondsTime("01:00:00")).toBe(3600);
+    });
+    it("all of them", () => {
+      expect(stringTimeToSecondsTime("01:11:04")).toBe(4264);
+    });
+  });
+
+  describe("length and time to speed", () => {
+    it("seconds only", () => {
+      expect(lengthTimeToSpeed(1, "00:00:30")).toBe(120);
+    });
+    it("minutes only", () => {
+      expect(lengthTimeToSpeed(10, "00:30:00")).toBe(20);
+    });
+    it("hours only", () => {
+      expect(lengthTimeToSpeed(10, "01:00:00")).toBe(10);
+    });
+    it("all of them", () => {
+      expect(lengthTimeToSpeed(21.1, "01:26:29").toFixed(2)).toBe("14.64");
     });
   });
 });

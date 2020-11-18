@@ -1,12 +1,12 @@
 <template>
-  <VMA @vma="onVmaChanged" />
+  <Vma @vma="onVmaChanged" />
   <RacePredictor v-if="vma" :vma="vma" />
   <TrainingRanges v-if="vma" :vma="vma"></TrainingRanges>
   <VmaTrainings v-if="vma" :vma="vma" />
 </template>
 
 <script lang="ts">
-import VMA from "@/components/VMA.vue";
+import Vma from "@/components/Vma/Vma.vue";
 import { defineComponent } from "vue";
 import TrainingRanges from "@/components/Trainings/TrainingRanges.vue";
 import RacePredictor from "@/components/RacePredictor.vue";
@@ -15,7 +15,7 @@ import VmaTrainings from "@/components/Trainings/VmaTrainings/VmaTrainings.vue";
 export default defineComponent({
   name: "App",
   components: {
-    VMA,
+    Vma,
     RacePredictor,
     TrainingRanges,
     VmaTrainings
@@ -45,7 +45,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: honeydew;
-  margin-top: 60px;
+  margin-top: 30px;
 
   table {
     color: #2c3e50;
