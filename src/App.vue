@@ -3,6 +3,7 @@
   <RacePredictor v-if="vma" :vma="vma" />
   <TrainingRanges v-if="vma" :vma="vma"></TrainingRanges>
   <VmaTrainings v-if="vma" :vma="vma" />
+  <TrackTrainings v-if="vma" :vma="vma" />
 </template>
 
 <script lang="ts">
@@ -11,6 +12,7 @@ import { defineComponent } from "vue";
 import TrainingRanges from "@/components/Trainings/TrainingRanges.vue";
 import RacePredictor from "@/components/RacePredictor.vue";
 import VmaTrainings from "@/components/Trainings/VmaTrainings/VmaTrainings.vue";
+import TrackTrainings from "@/components/Trainings/TrackTrainings/TrackTrainings.vue";
 
 export default defineComponent({
   name: "App",
@@ -18,7 +20,8 @@ export default defineComponent({
     Vma,
     RacePredictor,
     TrainingRanges,
-    VmaTrainings
+    VmaTrainings,
+    TrackTrainings
   },
   data() {
     const vma: number = null;

@@ -1,7 +1,9 @@
 import {
   decimalToPace,
-  lengthSpeedToTime, lengthTimeToSpeed,
-  speedToPace, stringTimeToSecondsTime
+  lengthSpeedToTime,
+  lengthTimeToSpeed,
+  speedToPace,
+  stringTimeToSecondsTime
 } from "@/filter/conversion";
 
 describe("conversion", () => {

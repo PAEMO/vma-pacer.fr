@@ -1,6 +1,6 @@
 <template>
   <h2>Séances VMA</h2>
-  <table id="vma-trainings-table">
+  <table>
     <thead>
       <tr>
         <th>%VMA</th>
@@ -75,9 +75,8 @@ export default defineComponent({
 });
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-#vma-trainings-table {
+table {
   margin-left: auto;
   margin-right: auto;
 }
