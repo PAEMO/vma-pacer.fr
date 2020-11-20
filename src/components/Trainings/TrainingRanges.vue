@@ -1,6 +1,6 @@
 <template>
   <h2>Zones d'entrainement</h2>
-  <table id="training-table">
+  <table>
     <thead>
       <tr>
         <th>Zone</th>
@@ -83,9 +83,8 @@ export default defineComponent({
 });
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-#training-table {
+table {
   margin-left: auto;
   margin-right: auto;
 }

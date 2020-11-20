@@ -4,6 +4,7 @@ export class Training {
     readonly percentage: number,
     readonly speed: number,
     readonly pace: string,
-    readonly examples?: string[]
+    readonly examples?: string[],
+    readonly length?: number
   ) {}
 }
