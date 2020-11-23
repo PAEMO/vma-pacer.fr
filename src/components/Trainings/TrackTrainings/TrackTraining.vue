@@ -33,7 +33,7 @@ export default defineComponent({
   background-color: #f5b174;
 }
 
-.track110 {
+.track105 {
   background-color: #f56666;
 }
 </style>

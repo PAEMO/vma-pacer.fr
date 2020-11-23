@@ -38,10 +38,10 @@ export default defineComponent({
     trainings(): Training[] {
       return [
         new Training(
-          "track110",
-          110,
-          applyPercentageSpeed(this.vma, 110),
-          speedToPace(applyPercentageSpeed(this.vma, 110)),
+          "track105",
+          105,
+          applyPercentageSpeed(this.vma, 105),
+          speedToPace(applyPercentageSpeed(this.vma, 105)),
           null,
           0.2
         ),
